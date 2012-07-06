@@ -1,8 +1,11 @@
 !SLIDE center
-# L.E.D Monitors #
+# LED Monitors #
 
 !SLIDE subsection
-# Flashback #
+# Who remembers this #
+
+!SLIDE center
+![monitor](crtmonitor.jpg)
 
 !SLIDE bullets incremental
 # CRT #
@@ -23,14 +26,18 @@
 ![crt](crt.gif)
 
 !SLIDE subsection
-# Who remembers this #
+# CRT on the way out #
 
-!SLIDE center transition=uncover
-# HEAVY #
+!SLIDE
+
+The _New York Times_ reports that, with sales of flat-screen televisions taking over the share of all TVs sold much faster than expected, the day is coming when you cannot buy a good old-fashioned, cheap, back-breaking tube television for hernias or money
+
+**JAMES PONIEWOZIK**, [Time](http://entertainment.time.com/2006/08/08/crt_tv_rip_or_why_you_may_soon/)
 
 !SLIDE bullets incremental
 # Enter LCD #
 
+* Liquid Crystal Display
 * Liquid crystals discovered in 1888
 * Worldwide sales of LCD TVs exceeded CRTs in 2008
 
@@ -64,6 +71,7 @@
 !SLIDE center transition=scrollUp
 # LED vs LCD #
 
+* Light-emitting diode
 * The difference is in the backlight
 
 !SLIDE center bullets
