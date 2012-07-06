@@ -6,6 +6,8 @@ body { background: #fff; font: "Lucida Grande", "Lucida Sans Unicode", Helvetica
 blockquote { width: 400px; text-align: left; margin: 0 auto !important; line-height: 1.5; }
 a { text-decoration: none; color: #4358CC; }
 .bullets ul { margin-left: 100px; }
-.bullets ul li { list-style-type: disc; margin-left: 5px; text-align: left; }
+.bullets ul li, .center ul li, .content ul li { list-style-type: disc; margin-left: 5px; text-align: left; font-size: 40px; }
 pre.sh_sourceCode { font-size: 25px; }
 img { width: 576px; height: 336px; }
+.content > p { text-align: left; }
+.small p { font-style: italic; }
