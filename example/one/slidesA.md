@@ -12,8 +12,7 @@
 * Vaccuum tube with an electron gun
 * Electrons fired onto a fluorescant screen
 
-!SLIDE full-page
-
+!SLIDE center
 ![crt](crt.gif)
 
 !SLIDE bullets incremental
