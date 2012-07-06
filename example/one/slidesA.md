@@ -1,120 +1,103 @@
 !SLIDE center
-# Logrotate #
+# L.E.D Monitors #
 
 !SLIDE subsection
-# Pop quiz, hot shot #
+# Flashback #
 
 !SLIDE bullets incremental
-# The scenario... #
+# CRT #
 
-* You put a ton of effort into building a great app
-* It's fast
-* It's tested
+* Cathode Ray Tube
+* Entered commercially in 1934 in Germany
+* Vaccuum tube with an electron gun
+* Electrons fired onto a fluorescant screen
+
+!SLIDE full-page
+
+![crt](crt.gif)
+
+!SLIDE bullets incremental
+# How it works #
+
+* Moving an electron beam back and forth across the back of the screen. 
+* Each time the beam makes a pass across the screen, it lights up phosphor dots on the inside of the glass tube, thereby illuminating the active portions of the screen.
+* By drawing many such lines from the top to the bottom of the screen, it creates an entire screen of images
 
 !SLIDE subsection
-# Just one problem #
+# Just one(*) problem #
 
 !SLIDE center transition=uncover
-# The server keeps crashing #
+# HEAVY #
 
 !SLIDE bullets incremental
-# Why? #
-
-* Turns out the logs are too big
-* The RAM is full
-* There is no disk space
-* This causes problems debugging
+# Enter LCD #
 
 !SLIDE center
-# You're not alone #
+# LCD in a nutshell #
 
-* This is actually one of the most common ways a junior sys-admin can mess up a server
-
-!SLIDE subsection
-# How to prevent this #
-
-!SLIDE center transition=scrollUp
-# Rotate your logs #
-
-!SLIDE center bullets
-# The good news #
-
-* It's surprisingly easy(*) to avoid
-
-!SLIDE subsection transition=fade
-# Enter logrotate #
+* LCD displays use two sheets of polarizing material with a liquid crystal solution between them
+* An electric current passed through the liquid causes the crystals to align so that light cannot pass through them.
+* Each crystal, therefore, is like a shutter, either allowing light to pass through or blocking the light.
+* Color LCD displays use two basic techniques for producing color: Passive matrix is the less expensive of the two technologies. 
+* The other technology, called thin film transistor (TFT) or active-matrix, produces color images that are as sharp as traditional CRT displays, but the technology is expensive
 
 !SLIDE
-# What Is It? #
+# Matrix #
 
-* a utility to manage and administer log files
+* LED matrix three pixel subsets
+* Electronics of grid controls which pixel is activated
+* RGB spectrum
+
+!SLIDE subsection
+# And finally, LED #
+
+!SLIDE center transition=scrollUp
+# LED vs LCD #
+
+* The difference is in the backlight
+
+!SLIDE center bullets
+# LED Backlighting #
+
+* LEDs use LED backlighting instead of the cold cathode fluorescent (CCFL) backlighting used in most other LCDs
+* The benefits: 
+  * Faster Turn On: LEDs can reach maximum brightness faster than CCFLs, in fact almost instantly.
+  * More Neutral Colors: CCFLs are known to give a warm/yellowish tint. LEDs have a more neutral whitepoint.
+  * Brighter: LEDs are brighter generally than CCFLs, thus allowing a display to achieve even higher maximum brightness.
+  * Thinner: The reason LEDs are coming into prominence is that it was driven by the notebook sectors - LED back-lighting can be made thinner than CCFL back-lighting.
+  * Longer-Lasting: Apparently, LEDs are rated for more life than CCFLs. Also the degradation over time is less severe than CCFLs.
+
+!SLIDE center
+# More benefits #
+
+* thinner panel
+* lower power consumption
+* better heat dissipation
+* a brighter display
+* and better contrast levels
+
+!SLIDE subsection transition=fade
+# What next #
+
+!SLIDE
+# Retina display #
+
+* Just how small can the grid get
+* Is subconscious
 
 !SLIDE bullets incremental
-# How it Works #
+# DPI #
 
-* set up in a config file
-* runs as a cron job
-* takes the log file, copies the data into another file that is timestamped in a directory you specify
-* deletes older logs after certain time
-* most operating systems(*) have it installed
+* Dots per square inch
+* Higher DPI --> a more seamless image
 
 !SLIDE bullets incremental
-# Some Features #
+# Max sensitivity #
 
-* rotated a number of times before getting deleted
-* allows automatic rotation, compression, removal, and mailing of log files
 * each log file may be handled daily, weekly, monthly, or when it grows too large
 
 !SLIDE bullets
-# Why it's useful #
+# Downsides of max sensitivity #
 
-* logs have short-term value
-* when they are rotated, you get rid of the invaluable stuff
-
-!SLIDE subsection
-# When isn't it useful? #
-
-!SLIDE bullets incremental transition=scrollUp
-# It's always useful #
-
-* It's an easy way to stay organized and keep your logs manageable
-* And therefore stay...performant?
-
-!SLIDE subsection
-# Example #
-
-!SLIDE commandline incremental
-
-  $ brew install logrotate
-
-  $ export PATH=${PATH}:/usr/local/sbin
-
-!SLIDE
-# Sample config in /etc/logrotate.d/ #
-
-    @@@ diff 
-    /Users/travisvalentine/hungry-projects/feed_engine/log/*.log {
-      size 0k
-      missingok
-      rotate 7
-      compress
-      delaycompress
-      notifempty
-      copytruncate
-    }
-
-!SLIDE commandline incremental
-
-  $ logrotate -f <configfile>
-
-!SLIDE center
-# Result #
-
-![Tada](logrotate.png)
-
-!SLIDE center bullets
-# Resources #
-
-* Logrotate on [linuxcommand.org](http://linuxcommand.org/man_pages/logrotate8.html)
-* Tutorial on logrotate for [Rails](http://nullislove.com/2007/09/10/rotating-rails-log-files/)
-* My [gist](https://gist.github.com/2848862) with the code from this presentation
+* More power consumption
+* More power leads to more heat
