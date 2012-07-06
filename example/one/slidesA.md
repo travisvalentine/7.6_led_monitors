@@ -138,5 +138,14 @@ Apple plans to reduce and eventually eliminate the use of mercury by transitioni
 * More power consumption
 * More power leads to more heat
 
+!SLIDE center small
+# Fun, relevant update #
+
+On the heels of a rumor that Apple is readying a minor update of the iPad ahead of the holiday season, an unverified report from the same publication claims that Apple is interested in returning to a one-LED backlight module solution instead of the two-LED design used in the current iPad.
+
+DigiTimes claimed on Friday that Apple was making the revisions to reduce the heat output of the iPad.
+
+"The extra LED is reportedly adding to overheating and that using one LED will help solve overheating issues since more backlights along with more power to heat those backlights is causing overheating," the report read.
+
 !SLIDE center
 # Thanks #
